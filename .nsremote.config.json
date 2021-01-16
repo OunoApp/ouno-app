@@ -1,0 +1,5 @@
+{
+    "circleci": {
+        "sshRepositoryURL": "git@github.com:nathanwmac/ouno-app.git"
+    }
+}

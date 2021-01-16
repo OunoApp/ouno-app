@@ -1,0 +1,40 @@
+<GridLayout rows="80, *" background="#26283B">
+
+    <GridLayout class="tm-header-bar" row="0" columns="*,*" background="#26283B" marginTop="30">
+
+        <Image column="0" src="res://action_bar_logo_white" stretch="none" verticalAlignment="middle" horizontalAlignment="left" marginLeft="20"></Image>
+
+        <GridLayout class="" column="1" columns="*,*" horizontalAlignment="right" marginRight="20" [nsRouterLink]="['/account']">
+            <Label col="0" text="Ounos" class="tm-text-bold" verticalAlignment="middle" horizontalAlignment="right" color="#fff"></Label>
+            <Label col="1" text="3" class="tm-text-bold" verticalAlignment="middle" horizontalAlignment="right" color="#fff"></Label>
+        </GridLayout>
+
+    </GridLayout>
+            
+    <Tabs row="1" selectedIndex="1" tabsPosition="bottom">
+        <TabStrip backgroundColor="#222439" height="65">
+            <TabStripItem class="navigation__item" marginTop="12">
+                <Label class="fas t-36" text="&#xf6de;"></Label>
+            </TabStripItem>
+            <TabStripItem class="navigation__item" marginTop="12">
+                <Label class="fas t-36" text="&#xf57d;"></Label>
+            </TabStripItem>
+            <TabStripItem class="navigation__item" marginTop="12">
+                <Label class="fas t-36" text="&#xf4be;"></Label>
+            </TabStripItem>
+        </TabStrip>
+
+        <TabContentItem>
+            <page-router-outlet name="contributeTab"></page-router-outlet>
+        </TabContentItem>
+
+        <TabContentItem>
+            <page-router-outlet name="homeTab"></page-router-outlet>
+        </TabContentItem>
+
+        <TabContentItem>
+            <page-router-outlet name="searchTab"></page-router-outlet>
+        </TabContentItem>
+    </Tabs>
+
+</GridLayout>

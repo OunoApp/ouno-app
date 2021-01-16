@@ -1,0 +1,76 @@
+@import "~@nativescript/theme/core";
+@import "~@nativescript/theme/blue";
+
+// Place any CSS rules you want to apply on both iOS and Android here.
+// This is where the vast majority of your CSS code goes.
+
+// Font icon class
+.fab {
+    font-family: "Font Awesome 5 Brands", "fa-brands-400";
+    font-weight: 400;
+}
+
+.fas {
+    font-family: "Font Awesome 5 Free", "fa-solid-900";
+    font-weight: 900;
+}
+
+.far {
+    font-family: "Font Awesome 5 Free", "fa-regular-400";
+    font-weight: 400;
+}
+
+.ns-root{
+    font-family: "Montserrat", "Montserrat-Regular";
+    font-weight: 400;
+}
+.tm-text-bold{
+    font-family: "Montserrat", "Montserrat-SemiBold";
+    font-weight: 600;
+
+}
+
+TabStrip {
+    selected-item-color: #adb0de;
+    un-selected-item-color: #454872;
+    highlight-color: transparent;
+}
+
+// Custom tabstrip item class
+.navigation__item {
+    &:active,
+    &:active Label {
+        @include colorize($contrasted-color: complementary background 20% 0%);
+    }
+}
+
+// Common page class
+.page__content {
+    &-icon,
+    &-placeholder {
+        color: const(grey);
+        font-size: 20;
+        vertical-align: center;
+        horizontal-align: center;
+    }
+
+    &-icon {
+        font-size: 72;
+        vertical-align: top;
+        margin-top: 20%;
+    }
+}
+
+.tm-header-bar{
+    
+}
+
+.tm-input-text{
+    color: #FFFFFF;
+    placeholder-color: #FFFFFF;
+    background:#2A2C40;
+    /*border: 2 solid #323448;*/
+    border-radius: 41;
+    padding:0 20;
+    border-bottom-color: transparent;
+}

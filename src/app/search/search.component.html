@@ -1,0 +1,34 @@
+<GridLayout class="page__content" background="linear-gradient(to bottom, #323448, #323448, #26283B)" rows="50, 40, 120, 70, *">
+
+    <Label row="0" text="Social Impact" class="h2 tm-text-bold" verticalAlignment="middle" horizontalAlignment="center" marginRight="20" marginLeft="20" marginTop="10" color="#fff"></Label>
+
+    <Label row="1" text="Popular" class="h3 tm-text-bold" verticalAlignment="middle" horizontalAlignment="left" marginRight="20" marginLeft="20" color="#fff"></Label>
+
+    <GridLayout row="2" columns="*, *, *" marginRight="20" marginLeft="20">
+        <GridLayout column="0" background="#fff" borderRadius="10" marginRight="5" marginLeft="5">
+            <Label text="Books for orphans appeal" class="text-center" verticalAlignment="middle" color="#fff"></Label>
+        </GridLayout>
+        <GridLayout column="1" background="#fff" borderRadius="10" marginRight="5" marginLeft="5">
+            <Label text="Books for orphans appeal" class="text-center" verticalAlignment="middle" color="#fff"></Label>
+        </GridLayout>
+        <GridLayout column="2" background="#fff" borderRadius="10" marginRight="5" marginLeft="5">
+            <Label text="Books for orphans appeal" class="text-center" verticalAlignment="middle" color="#fff"></Label>
+        </GridLayout>
+    </GridLayout>
+
+    <TextField row="3" hint="Filter" marginTop="20" marginRight="20" marginLeft="20" class="tm-input-text">
+    </TextField>
+
+
+    <ScrollView row="4" orientation="vertical" marginTop="20">
+        <StackLayout>
+            <StackLayout *ngFor="let item of causes" height="120">
+                <GridLayout background="#fff" borderRadius="10" marginRight="20" marginLeft="20" marginBottom="20">
+                    <Label [text]="item.name" class="text-center" verticalAlignment="middle" color="#000"></Label>
+                </GridLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+
+</GridLayout>

@@ -1,0 +1,9 @@
+<GridLayout background="linear-gradient(to bottom, #323448, #323448, #26283B)">
+    <ListView [items]="items">
+        <ng-template let-item="item">
+            <StackLayout>
+                <Label [nsRouterLink]="['../item', item.id]" [text]="item.name"></Label>
+            </StackLayout>
+        </ng-template>
+    </ListView>
+</GridLayout>

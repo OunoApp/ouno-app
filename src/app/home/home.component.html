@@ -1,0 +1,37 @@
+<GridLayout background="linear-gradient(to bottom, #323448, #323448, #26283B)" rows="140, 60, 20, 65, 40, 80, 60, *">
+
+    <GridLayout row="0" background="linear-gradient(to bottom, #F29FBD, #ABA3F7)" borderRadius="10" marginRight="20" marginLeft="20" marginTop="20">
+
+        <Label text="Next Draw in 7 Days" class="h2 text-center" verticalAlignment="middle" color="#fff"></Label>
+
+    </GridLayout>
+
+    <Label row="1" text="This Week" class="h3 tm-text-bold" verticalAlignment="middle" marginRight="20" marginLeft="20"  marginTop="20" color="#fff"></Label>
+
+    <GridLayout row="2" marginRight="35" marginLeft="35" columns="*,*">
+        <Label col="0" text="Raised" class="tm-text-bold" verticalAlignment="middle" color="#fff"></Label>
+        <Label col="1" text="USD" class="" verticalAlignment="middle" horizontalAlignment="right" color="#fff"></Label>
+    </GridLayout>
+
+    <GridLayout row="3" background="#454872" borderRadius="10" marginRight="20" marginLeft="20" marginTop="5">
+
+        <Label [text]="currentDraw.amount | currency:'USD':''" class="h2 text-center" verticalAlignment="middle" color="#fff" fontSize="35"></Label>
+
+    </GridLayout>
+
+    <GridLayout row="4" marginRight="35" marginLeft="35" marginTop="20" columns="*,*">
+        <Label col="0" text="People" class="tm-text-bold" verticalAlignment="middle" color="#fff"></Label>
+        <Label col="1" text="Planet" class="tm-text-bold" verticalAlignment="middle" horizontalAlignment="right" color="#fff"></Label>
+    </GridLayout>
+
+    <GridLayout row="5" background="#454872" borderRadius="10" marginRight="20" marginLeft="20" marginTop="5" columns="*,*,*">
+
+        <Label col="0" text="25%" class="h2 text-center tm-text-bold" verticalAlignment="middle" color="#fff" fontSize="35"></Label>
+        <Label col="1" text="&#xf57d;" class="fas t-36" verticalAlignment="middle" color="#fff" fontSize="60" horizontalAlignment="center"></Label>
+        <Label col="2" text="75%" class="h2 text-center tm-text-bold" verticalAlignment="middle" color="#fff" fontSize="35"></Label>
+
+    </GridLayout>
+
+    <Label row="6" text="Trending" class="h3 tm-text-bold" verticalAlignment="middle" marginRight="20" marginLeft="20"  marginTop="20" color="#fff"></Label>
+    
+</GridLayout>
