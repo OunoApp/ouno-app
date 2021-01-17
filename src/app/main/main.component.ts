@@ -16,4 +16,13 @@ export class MainComponent {
     ngOnInit() {
         this.routerExtension.navigate([{ outlets: { contributeTab: ["contribute"], homeTab: ["home"], searchTab: ["search"] } }], { relativeTo: this.activeRoute });
     }
+
+    navToAccount() {
+        // Navigate to login page with clearHistory
+        this.routerExtension.navigate(["../account"], { 
+            clearHistory: false, 
+            animated: true,
+            transition: { name: 'slide' } 
+        });
+    }
 }

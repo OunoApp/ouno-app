@@ -1,5 +1,5 @@
 
-<GridLayout rows="auto, auto">
-    <Button text="Go To Tabs Page" [nsRouterLink]="['/main/default']"></Button>
+<GridLayout rows="auto, auto" marginTop="30">
+    <Button text="Go To Tabs Page" (tap)="onGoMain()"></Button>
     <Button row="1" text="Logout" (tap)="onLogout()"></Button>
 </GridLayout>

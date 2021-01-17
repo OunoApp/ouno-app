@@ -3,6 +3,9 @@ import { NativeScriptRouterModule, NSEmptyOutletComponent } from "@nativescript/
 import { NativeScriptCommonModule } from "@nativescript/angular";
 
 import { MainComponent } from "./main.component";
+import { ContributeModule } from "../contribute/contribute.module";
+import { HomeModule } from "../home/home.module";
+import { SearchModule } from "../search/search.module";
 
 @NgModule({
     imports: [
@@ -14,19 +17,22 @@ import { MainComponent } from "./main.component";
                     {
                         path: "contribute",
                         component: NSEmptyOutletComponent,
-                        loadChildren: () => import("~/app/contribute/contribute.module").then((m) => m.ContributeModule),
+                        //loadChildren: () => import("~/app/contribute/contribute.module").then((m) => m.ContributeModule),
+                        loadChildren: () => ContributeModule,
                         outlet: "contributeTab"
                     },
                     {
                         path: "home",
                         component: NSEmptyOutletComponent,
-                        loadChildren: () => import("~/app/home/home.module").then((m) => m.HomeModule),
+                        //loadChildren: () => import("~/app/home/home.module").then((m) => m.HomeModule),
+                        loadChildren: () => HomeModule,
                         outlet: "homeTab"
                     },
                     {
                         path: "search",
                         component: NSEmptyOutletComponent,
-                        loadChildren: () => import("~/app/search/search.module").then((m) => m.SearchModule),
+                        //loadChildren: () => import("~/app/search/search.module").then((m) => m.SearchModule),
+                        loadChildren: () => SearchModule,
                         outlet: "searchTab"
                     }
                 ]

@@ -1,16 +1,17 @@
 import { NgModule } from "@angular/core";
-import { Routes } from "@angular/router";
+import { Routes, PreloadAllModules } from "@angular/router";
 import { NativeScriptRouterModule, NSEmptyOutletComponent } from "@nativescript/angular";
 
 import { LoginComponent } from "./login/login.component";
 import { WelcomeComponent } from "./welcome/welcome.component";
 import { AccountComponent } from "./account/account.component";
+import { MainModule } from "./main/main.module";
 
-export const COMPONENTS = [LoginComponent, WelcomeComponent];
+export const COMPONENTS = [LoginComponent, WelcomeComponent, AccountComponent];
 
 const routes: Routes = [
 
-    { path: "", redirectTo: "/login", pathMatch: "full" },
+    { path: "", redirectTo: "/main/default", pathMatch: "full" },
     {
         path: "login", component: LoginComponent
     },
@@ -22,8 +23,15 @@ const routes: Routes = [
     },
     {
         path: "main",
+        //component: NSEmptyOutletComponent,
+        loadChildren: () => MainModule,
+    },
+    /*
+    {
+        path: "main",
         loadChildren: () => import("~/app/main/main.module").then(m => m.MainModule),
     },
+    */
 
     /*
     {
@@ -55,7 +63,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [NativeScriptRouterModule.forRoot(routes, { enableTracing: true })],
+    imports: [NativeScriptRouterModule.forRoot(routes, { enableTracing: true, preloadingStrategy: PreloadAllModules })],
     exports: [NativeScriptRouterModule]
 })
 export class AppRoutingModule { }

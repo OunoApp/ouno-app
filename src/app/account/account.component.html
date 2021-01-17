@@ -1,4 +1,11 @@
+<GridLayout rows="80, auto" background="#26283B">
 
-<GridLayout rows="auto, auto">
-    <Button text="Go Back" [nsRouterLink]="['/main/default']"></Button>
+    <GridLayout class="tm-header-bar" row="0" columns="auto,auto" background="#26283B" marginTop="30">
+
+    	<Label column="0" class="fas" fontSize="18" text="&#xf060;" color="#FFFFFF" verticalAlignment="middle" horizontalAlignment="left" marginLeft="20" (tap)="onGoMain()"></Label>
+    	<Label column="1" class="tm-text-bold" fontSize="18" text="Profile" color="#FFFFFF" verticalAlignment="middle" horizontalAlignment="left" marginLeft="20" (tap)="onGoMain()"></Label>
+
+    </GridLayout>
+
+    <Label row="1" text="Account" color="#FFFFFF" horizontalAlignment="left"></Label>
 </GridLayout>

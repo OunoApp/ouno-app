@@ -9,8 +9,12 @@ import { RouterExtensions } from "@nativescript/angular";
 export class AccountComponent {
     constructor(private routerExtension: RouterExtensions) { };
 
-    onLogout() {
+    onGoMain() {
         // Navigate to login page with clearHistory
-        //this.routerExtension.navigate(["../login"], { clearHistory: true });
+        this.routerExtension.navigate(["../main/default"], { 
+        	clearHistory: true, 
+        	animated: true,
+      		transition: { name: 'slide' } 
+      	});
     }
 }
